@@ -5,8 +5,6 @@
 
 extern void setup_neoPixel(void);
 extern void rgb(void);
-// extern void rgbWheel(void);
-// extern uint32_t Wheel(byte WheelPos);
 
 #endif
 

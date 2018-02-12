@@ -1,7 +1,6 @@
 // Mon Feb 12 11:24:40 UTC 2018
 
 // NeoPixel strip 8x - simple sketch (c) 2013 Shae Erisson
-// released under the GPLv3 license to match the rest of the AdaFruit NeoPixel library
 
 #include <Arduino.h>
 
