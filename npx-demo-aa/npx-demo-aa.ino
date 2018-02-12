@@ -1,6 +1,6 @@
-// Mon Feb 12 11:24:40 UTC 2018
+// Mon Feb 12 12:29:42 UTC 2018
 // KELGON
-// NeoPixel strip 8x -  portions are (c) 2013 Shae Erisson
+// NeoPixel -  portions are (c) 2013 Shae Erisson
 
 #include <Arduino.h>
 #include "neo_pixel.h"
@@ -42,7 +42,7 @@ void color_cyan(void) {
 }
 
 
-void ouch(void) { // too bright for my eyes. Turn everthing off.
+void ouch(void) { // too bright. Turn everthing off.
     color_alldark();
     for (int i = 0; i < (numpixels + 1); i++) {
         position = i;
@@ -51,7 +51,7 @@ void ouch(void) { // too bright for my eyes. Turn everthing off.
 }
 
 
-void dostuff(void) {
+void footlights(void) {
 
     position = 0;  // pixel number on the strip, starting with zero
     color_grape(); // desired color tuple - no exec, just data
@@ -87,12 +87,12 @@ void dostuff(void) {
 }
 
 
-void flasher(void) {
-    for (int i = 0; i < 3; i++) {
-        ouch();        // blank all pixels - completely dark (OFF)
-        delay(1200);
-        dostuff();
-        delay(800);
+void flasher(void) { // fast flasher
+    for (int i = 0; i < 7; i++) {
+        ouch();        // strip is completely dark (OFF)
+        delay(400);
+        footlights();
+        delay(200);
     }
 }
 
@@ -110,9 +110,10 @@ void setup(void) {
     delay(3000);
 }
 
+
 void loop(void) {
     ouch();
-    dostuff();
+    footlights();
     delay(5000);   // provide a moment to appreciate current display
     ouch();        // blank all pixels - completely dark (OFF)
     delay(8000);

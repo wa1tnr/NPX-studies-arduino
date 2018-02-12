@@ -1,4 +1,4 @@
-// Mon Feb 12 11:24:40 UTC 2018
+// Mon Feb 12 12:29:42 UTC 2018
 
 // NeoPixel strip 8x - simple sketch (c) 2013 Shae Erisson
 
@@ -29,6 +29,7 @@ void setup_neoPixel(void) {
     pixels.show();
 }
 
+// rgb() is the workhorse of the entire demo program.
 void rgb(void) {
     pixels.setPixelColor(position, pixels.Color(red, green, blue));
     pixels.show();
