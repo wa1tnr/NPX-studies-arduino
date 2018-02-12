@@ -88,7 +88,7 @@ void footlights(void) {
 
 
 void flasher(void) { // fast flasher
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 12; i++) {
         ouch();        // strip is completely dark (OFF)
         delay(400);
         footlights();
